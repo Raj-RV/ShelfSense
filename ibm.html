@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Recommendation - ShelfSense</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a148c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .genre-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .genre-buttons button {
+      padding: 15px 25px;
+      background-color: #7e57c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .genre-buttons button:hover {
+      background-color: #5e35b1;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 ShelfSense</h1>
+    <p>Your Personal Book Recommendation Assistant</p>
+  </header>
+
+  <main>
+    <h2>Choose a Genre</h2>
+    <div class="genre-buttons">
+      <button>Fantasy</button>
+      <button>Mystery</button>
+      <button>Science Fiction</button>
+      <button>Romance</button>
+      <button>Biography</button>
+      <button>Horror</button>
+      <button>Technology</button>
+      <button>Philosophy</button>
+    </div>
+    <p style="margin-top: 40px;">Need help? Ask our chatbot in the corner!</p>
+  </main>
+
+  <footer>
+    &copy; 2025 ShelfSense | Created with ❤️ using IBM Watson
+  </footer>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "8680587a-bd9d-4805-9857-aff92f1ab04e", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "9463fb2b-153d-4f2a-9354-28cbee9ce66b", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
